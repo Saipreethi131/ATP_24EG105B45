@@ -1,0 +1,56 @@
+GET http://localhost:3000/users 
+
+###
+GET http://localhost:3000/users/1
+###
+POST http://localhost:3000/users
+Content-Type:application/json
+
+{
+    "id":1,
+    "name":"Preethi",
+    "age":20
+}
+
+###
+ PUT http://localhost:3000/users
+ Content-Type: application/json
+
+ {
+    "id":1,
+    "name":"preethi",
+    "age":30
+ }
+###
+DELETE http://localhost:3000/users/1
+
+###
+GET http://localhost:3000/products
+
+###
+GET http://localhost:3000/products/Brand/fasttrack
+###
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "productId":105,
+    "name":"Watch",
+    "brand":"fasttrack",
+    "price":2000
+}
+
+###
+PUT http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "productId":102,
+    "name":"Watch",
+    "brand":"fasttrack",
+    "price":3500
+}
+
+
+###
+DELETE http://localhost:3000/products/101
