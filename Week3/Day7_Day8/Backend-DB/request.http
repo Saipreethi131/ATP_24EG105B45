@@ -1,0 +1,77 @@
+
+###GET USER BY Id(logged in user)
+GET http://localhost:4000/user-api/user
+
+### USER LOGIN
+POST http://localhost:4000/user-api/auth
+Content-Type:application/json
+
+{
+    "email":"priya@gmail.com",
+    "password":"priya"
+}
+
+### PROTECTED ROUTE -get all users
+GET http://localhost:4000/user-api/users
+###Cookie:token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJoYW51QGdtYWlsLmNvbSIsImlhdCI6MTc3MzI5Mzg4NiwiZXhwIjoxNzczMjk3NDg2fQ.HGWyggpFSiCMK_smq2ATf9lFi8-qlZqM-1BKpFGGxPc; Path=/; HttpOnly; SameSite=Lax
+
+### CREATE NEW USER
+POST http://localhost:4000/user-api/users
+Content-Type:application/json
+
+{
+    "username":"priya",
+    "password":"priya",
+    "email":"priya@gmail.com",
+    "age":20
+}
+
+### PROTECTED ROUTE
+PUT http://localhost:4000/user-api/users/69b41f4156d1115e8d81de0e
+Content-Type: application/json
+
+ {
+    "username":"bhanu",
+    "password":"bhanu",
+    "email":"bhanu@gmail.com",
+    "age":18
+ }
+###
+DELETE http://localhost:4000/user-api/users/69aa9363e3bd88d1de58f075
+
+
+### ADD PRODUCT TO USER CART
+PUT http://localhost:4000/user-api/cart/product-id/69b25eb3edb8e8a0e72e9bfc
+
+
+
+### PRODUCT REQUESTS
+GET http://localhost:4000/product-api/products
+
+###
+GET http://localhost:4000/product-api/products/101
+###
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+    "productId":"101",
+    "productName":"Watch",
+    "price":15000,
+    "brand":"Lenovo"
+}
+
+###
+PUT http://localhost:4000/product-api/products/101
+Content-Type: application/json
+
+{
+    "productId":"101",
+    "name":"Watch",
+    "price":15000,
+    "brand":"Rolex"
+}
+
+
+###
+DELETE http://localhost:4000/product-api/products/101
