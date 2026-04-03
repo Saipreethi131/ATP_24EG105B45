@@ -1,0 +1,29 @@
+### TO CREATE EMPLOYEE
+POST http://localhost:3000/employee-api/create
+Content-Type: application/json
+
+{
+    "name":"employee5",
+    "email":"employee5@gmail.com",
+    "mobile": 9876543210,
+    "designation":"Team Lead",
+    "companyname":"Deloitte"
+}
+### To READ ALL USERS
+GET http://localhost:3000/employee-api/employees
+
+### EDIT EMPLOYEE
+PUT http://localhost:3000/employee-api/employees/69ca273bdcc7c7b36afeb84f
+Content-Type: application/json
+
+{
+    "name":"employee2",
+    "email":"employee2@gmail.com",
+    "mobile": 9876543210,
+    "designation":"senior Manager",
+    "companyname":"Deloitte"
+}
+
+
+### DELETE EMPLOYEE
+DELETE http://localhost:3000/employee-api/employees/69cb61330b2346ac2dcef4fd
