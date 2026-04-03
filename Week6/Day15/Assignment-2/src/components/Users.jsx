@@ -61,6 +61,3 @@ if(error!=null){
     );
 }
 export default Users;
-
-
-//shadow-md transition-shadow duration-300 hover:shadow-xl
