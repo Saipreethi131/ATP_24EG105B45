@@ -1,16 +1,12 @@
-# React + Vite
+# React User Form
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A client-side user registration application integrating robust form validation.
 
-Currently, two official plugins are available:
+## Key Features
+- **Form Validation Hook**: Utilizes `react-hook-form` to process verified First Name, Email, and DOB inputs, reporting real-time red error validation warnings if fields are invalid or empty.
+- **Roster State Synchronization**: Accumulates submitted data blocks into a local React state array, automatically clearing form inputs upon success.
+- **Dynamic Table Display**: Renders a custom table list of registered users below the form, displaying a friendly "No users added yet" indicator if the list is empty.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Commands
+- **Start Local Server**: `npm run dev`
+- **Build Production Assets**: `npm run build`
