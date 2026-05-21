@@ -31,7 +31,7 @@ app.get('/health', (req, res) => res.sendStatus(200))
 if (process.env.NODE_ENV === 'production') {
     const distPath = path.join(__dirname, '..', 'Frontend', 'dist')
     app.use(exp.static(distPath))
-    app.get('/*', (req, res) => {
+    app.get('/:any*', (req, res) => {
         res.sendFile(path.join(distPath, 'index.html'))
     })
 }
