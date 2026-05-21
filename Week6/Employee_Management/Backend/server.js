@@ -6,6 +6,7 @@ import {employeeapp} from "./APIs/EmployeeAPI.js"
 import cors from "cors"
 import path from "path"
 import { fileURLToPath } from "url"
+import fs from "fs"
 
 const app=exp()
 
@@ -27,12 +28,22 @@ app.use("/employee-api",employeeapp)
 // health endpoint for readiness checks
 app.get('/health', (req, res) => res.sendStatus(200))
 
-// If running in production, serve frontend build
+// If running in production, serve frontend build if it exists
 if (process.env.NODE_ENV === 'production') {
     const distPath = path.join(__dirname, '..', 'Frontend', 'dist')
-    app.use(exp.static(distPath))
-    app.get(/.*/, (req, res) => {
-        res.sendFile(path.join(distPath, 'index.html'))
+    if (fs.existsSync(distPath)) {
+        app.use(exp.static(distPath))
+        app.get(/.*/, (req, res) => {
+            res.sendFile(path.join(distPath, 'index.html'))
+        })
+    } else {
+        app.get('/', (req, res) => {
+            res.send("Employee Management Backend API is running.")
+        })
+    }
+} else {
+    app.get('/', (req, res) => {
+        res.send("Employee Management Backend API is running in development.")
     })
 }
 
