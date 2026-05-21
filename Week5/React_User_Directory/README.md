@@ -1,16 +1,12 @@
-# React + Vite
+# React User Directory
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple team user listing application representing member directory cards.
 
-Currently, two official plugins are available:
+## Key Features
+- **User Cards Roster**: Displays visual roster entries listing user names, email details, and mock headshot avatar elements.
+- **Component Hierarchy**: Feeds user data loops from `<UserList />` into singular `<User />` card displays.
+- **Structured Roster Layout**: Styled using grid modules to offer a clean look.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Commands
+- **Start Local Server**: `npm run dev`
+- **Build Production Assets**: `npm run build`
