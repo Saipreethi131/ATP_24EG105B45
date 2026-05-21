@@ -2,6 +2,12 @@
 
 A full-stack MERN application to create, view, edit, and delete employee profiles.
 
+## Deployment
+
+The application is fully deployed and accessible at:
+- **Frontend App (Vercel)**: [https://employee-management-b45.vercel.app](https://employee-management-b45.vercel.app)
+- **Backend REST API (Render)**: [https://employee-management-iu0k.onrender.com](https://employee-management-iu0k.onrender.com)
+
 ## Project Structure
 - **`Frontend/`**: React SPA (Vite + Tailwind CSS)
 - **`Backend/`**: Express.js REST API + MongoDB (Mongoose)
